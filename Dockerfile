@@ -1,8 +1,8 @@
-FROM centos:7
+FROM alpine
 
 USER root
 
-RUN yum install -y wget telnet bind-utils iputils
+RUN apk add -y wget curl busybox-extras iputils
 
 CMD tail -f /dev/null
 
